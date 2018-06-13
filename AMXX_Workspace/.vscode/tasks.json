@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "taskName": "Compile AMXX Plugin (Windows)",
+            "type": "process",
+            "command": "${workspaceRoot}\\scripting\\amxxpc.exe",
+            "args": [
+                "${file}",
+                "-i${workspaceRoot}\\scripting\\include",
+                "-o${workspaceRoot}\\plugins\\${fileBasenameNoExtension}.amxx"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}  
